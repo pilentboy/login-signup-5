@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+:root{
+    --mainBTN:rgb(202, 67, 37);
+    --selectBG:linear-gradient(180deg, rgba(61,26,101,1) 0%, rgb(212, 45, 104) 0%);
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 750px;
+    max-width: 95vw;
+    height: 80vh;
+    max-height: 550px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(89, 89, 89, 0.587);
+    border-radius: 10px;
+    box-shadow: 0 6px 5px 2px rgba(149, 148, 148, 0.587);
+}
+
+
+#form #phoneSelectBTN{
+    display: none;
+    border-bottom: 1px solid var(--mainBTN);
+    border-radius: 0;
+}
+
+
+
+#container #formBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    z-index: 2;
+
+}
+#container #formSelectBox,#formBox{
+    transition: transform 0.7s;
+}
+
+.TXp100{
+    transform: translateX(100%);
+}
+
+.TXm100{
+    transform: translateX(-100%);
+}
+
+#container #formBox *{
+    margin: 7px 0;
+}
+#container #formBox #title{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#container #formBox #icons{
+    display: flex;
+    align-items: center;
+}
+
+#container #formBox #icons a{
+    margin: 0 5px;
+    color: black;
+    border: 1px solid rgb(188, 184, 184);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+#container #formBox #icons a i{
+    font-size: 1rem;
+}
+
+#container #formBox #form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#container #formBox #form span{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#container #formBox #form *{
+}
+
+#container #formBox #form input{
+    padding: 9px 5px;
+    width: 100%;
+    background-color: rgb(242, 236, 236);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#container #formBox #form input::placeholder{
+
+}
+
+#container #formBox #form a{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+#container .btn{
+    padding: 8px 40px;
+    border-radius: 20px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Mukta', sans-serif;
+}
+
+#container #formBox #form #formBTN{
+    border-color: white;
+    color: white;
+    border: none;
+    background-color: var(--mainBTN);
+}
+
+
+/*FORM SELECT BOX*/
+
+#formSelectBox{
+    background:var(--selectBG);
+    flex: 1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+#formSelectBox *{
+    color: white;
+    margin: 10px 0;
+}
+
+#formSelectBox h1{
+    font-size: 2.5rem;
+}
+
+#formSelectBox p{
+    width: 80%;
+    font-size: 1.1rem;
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(206, 206, 206);
+}
+
+#formSelectBox {
+ 
+    
+}
+#phoneSelectBTN,#formSelectBTN{
+    background-color:transparent;
+    border: 1px solid white;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    #form #phoneSelectBTN{
+        display: block;
+    }
+    #formSelectBox{
+        display: none;
+    }
+}
